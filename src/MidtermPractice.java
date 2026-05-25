@@ -1,15 +1,25 @@
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.HashMap;
 
 public class MidtermPractice {
 
     public static void main(String[] args) {
+        
+        //Method 1
         List<String> l1 = new ArrayList<>();
         l1.add("ever"); l1.add("love"); l1.add("doomed");
         l1.add("e"); l1.add(""); l1.add("Tried");
 
         System.out.println(findLongestWord(l1));
+
+        //Method 2
+        Map<String, Integer> m1 = new HashMap<>();
+        m1.put("Mappppttt", 1); m1.put("Map", 323);
+        m1.put("Hello", 1); m1.put("Perchance", 7);
+
+        System.out.println(countLongWords(m1));
     }
 
     /**
@@ -37,7 +47,12 @@ public class MidtermPractice {
      * Example: input: ["why"=7, "hello"=8, "brilliant"=99, "world"=15, "amazing"=17] -> output: 2
      */
     public static int countLongWords(Map<String, Integer> map) {
-        return -1;
+        int count = 0;
+        for( String x : map.keySet() )
+        {
+            if(x.length() > 5){count++;}
+        }
+        return count; 
     }
 
     /**
