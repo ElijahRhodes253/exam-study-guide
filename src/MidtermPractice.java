@@ -20,6 +20,10 @@ public class MidtermPractice {
         m1.put("Hello", 1); m1.put("Perchance", 7);
 
         System.out.println(countLongWords(m1));
+
+        //Method 3
+        float[] a1 = {2.4f, 5.5f, 17.1f, 0f, 9f, 4.3f};
+        System.out.println(findAverage(a1));
     }
 
     /**
@@ -62,7 +66,12 @@ public class MidtermPractice {
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
      */
     public static double findAverage(float[] arr) {
-        return -1.0;
+        double tot = 0.0;
+        for(int i = 0; i < arr.length; i++)
+        {
+            tot += arr[i];
+        }
+        return (tot/(arr.length));
     }
 
     /**
