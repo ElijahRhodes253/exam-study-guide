@@ -34,6 +34,13 @@ public class MidtermPractice {
 
         System.out.println(allDivisibleBy3(a2));
         System.out.println(allDivisibleBy3(a3));
+
+        //Method 6
+        List<String> l2 = new ArrayList<>();
+        l2.add("apple"); l2.add("ApT"); l2.add("a");
+
+        System.out.println(allStartWithA(l1));
+        System.out.println(allStartWithA(l2));
     }
 
     /**
@@ -122,7 +129,11 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "avocado"] -> output: false
      */
     public static boolean allStartWithA(List<String> list) {
-        return false;
+        for( String x : list )
+        {
+            if(x.toLowerCase().charAt(0) != 'a'){return false;}
+        }
+        return true;
     }
 
     /**
