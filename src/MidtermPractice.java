@@ -17,13 +17,17 @@ public class MidtermPractice {
         //Method 2
         Map<String, Integer> m1 = new HashMap<>();
         m1.put("Mappppttt", 1); m1.put("Map", 323);
-        m1.put("Hello", 1); m1.put("Perchance", 7);
+        m1.put("Hello", 2); m1.put("Perchance", 7);
 
         System.out.println(countLongWords(m1));
 
         //Method 3
         float[] a1 = {2.4f, 5.5f, 17.1f, 0f, 9f, 4.3f};
         System.out.println(findAverage(a1));
+
+        //Method 4
+        System.out.println(countOddNumbers(m1));
+        
     }
 
     /**
@@ -81,7 +85,12 @@ public class MidtermPractice {
      * Example: input: {"a"=7, "x"=4, "z"=5} -> output: 2
      */
     public static int countOddNumbers(Map<String, Integer> map) {
-        return -1;
+        int count = 0;
+        for( String x : map.keySet() )
+        {
+            if(map.get(x) % 2 != 0){count++;}
+        }
+        return count;
     }
 
     /**
