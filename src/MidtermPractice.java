@@ -27,7 +27,13 @@ public class MidtermPractice {
 
         //Method 4
         System.out.println(countOddNumbers(m1));
-        
+
+        //Method 5
+        int[] a2 = {3, 6, 9};
+        int[] a3 = {3, 4, 6, 9};
+
+        System.out.println(allDivisibleBy3(a2));
+        System.out.println(allDivisibleBy3(a3));
     }
 
     /**
@@ -101,7 +107,11 @@ public class MidtermPractice {
      * Example 2: input: [3, 4, 6, 9] -> output: false
      */
     public static boolean allDivisibleBy3(int[] arr) {
-        return false;
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] % 3 != 0){return false;}
+        }
+        return true;
     }
 
     /**
