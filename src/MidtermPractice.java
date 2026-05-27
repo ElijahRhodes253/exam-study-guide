@@ -41,6 +41,12 @@ public class MidtermPractice {
 
         System.out.println(allStartWithA(l1));
         System.out.println(allStartWithA(l2));
+
+        //Method 7
+        int[] aS1 = {1, 3, 8, 2, 1, 2, 7};
+        int[] aS2 = {1, 2, 3, 4, 5};
+        System.out.println(canPartitionWithEqualSums(aS1));
+        System.out.println(canPartitionWithEqualSums(aS2));
     }
 
     /**
@@ -155,7 +161,17 @@ public class MidtermPractice {
      * Output: false (no contiguous split results in equal sums)
      */
     public static boolean canPartitionWithEqualSums(int[] arr) {
+        int tot1 = 0;
+        int tot2 = 0;
+        for(int x = 0; x < arr.length; x++)
+        {
+            tot2 += arr[x];
+        }
+        for(int i = 0; i < arr.length; i++)
+        {
+            tot1 += arr[i];
+            if(tot2-tot1 == tot1){return true;}
+        }
         return false;
     }
-
 }
